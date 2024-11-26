@@ -1,0 +1,21 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape with color, corners, and stroke -->
+    <item>
+        <shape>
+            <solid android:color="#F0F8FF" />
+            <corners android:radius="8dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/light_gray" />
+        </shape>
+    </item>
+
+    <!-- Arrow icon on the right side, with specified width and height -->
+    <item android:right="8dp" android:gravity="end|center_vertical">
+        <bitmap
+            android:src="@drawable/icon_arrowdown"
+            android:width="25dp"
+            android:height="25dp"
+            android:gravity="end|center_vertical" />
+    </item>
+</layer-list>

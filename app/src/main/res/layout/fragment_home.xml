@@ -1,0 +1,88 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="20dp">
+
+    <Toolbar
+        android:id="@+id/tb_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <SearchView
+            android:id="@+id/sv_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_search"
+            android:queryHint="Search here"
+            android:iconifiedByDefault="false"/>
+    </Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_home_categories"
+        android:layout_marginTop="15dp"
+        android:text="Categories"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tb_home"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <GridView
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/gv_home_categories"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:verticalSpacing="8.75dp"
+        android:horizontalSpacing="5dp"
+        android:numColumns="4"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_categories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_Todaytask"
+        android:layout_marginTop="25dp"
+        android:text="Today's Tasks"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@id/gv_home_categories"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ListView
+        android:id="@+id/lv_Todaytask"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="20dp"
+        android:divider="@android:color/white"
+        android:dividerHeight="10dp"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarSize="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_Todaytask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

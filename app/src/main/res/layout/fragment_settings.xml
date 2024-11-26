@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fm_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context=".SettingsFragment">
+
+        <!--  Text Settings  -->
+        <TextView
+            android:id="@+id/tv_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/blue"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--  Text Account  -->
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="20dp"
+            android:text="@string/account"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:drawableLeftCompat="@drawable/ic_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
+
+        <!--  arrow right  -->
+        <ImageView
+            android:id="@+id/ic_arrow_right_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_account"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--  About  -->
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:drawablePadding="20dp"
+            android:text="@string/about"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:drawableLeftCompat="@drawable/ic_about"
+            app:layout_constraintStart_toStartOf="@+id/tv_account"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account" />
+
+        <!--  arrow right  -->
+        <ImageView
+            android:id="@+id/ic_arrow_right_noti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_about"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <!-- Log out Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/button"
+            android:padding="14dp"
+            android:text="@string/log_out"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_about" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

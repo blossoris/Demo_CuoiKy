@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarSize="8dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/tv_addtask_tittle"
+                android:text="Add Task"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_addtask_taskname_label"
+                android:text="Task name"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_tittle"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints=""
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:id="@+id/tv_addtask_addtask_textbox"
+                android:layout_marginTop="7dp"
+                android:hint="@string/write_your_task_name_here"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/background_tasks_item"
+
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_taskname_label"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_addtask_categories_label"
+                android:text="@string/category"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_addtask_textbox"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_addtask_categories"
+                android:layout_marginTop="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:gravity="center_vertical"
+                android:spinnerMode="dropdown"
+                android:minHeight="48dp"
+                android:background="@drawable/background_spinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_categories_label"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_addtask_date_label"
+                android:text="@string/date"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/sp_addtask_categories"
+                app:layout_constraintStart_toStartOf="parent" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_date_input_layout"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_date_label"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <ImageView
+                    android:id="@+id/img_addtask_date"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:src="@drawable/icon_calendar2"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_addtask_date_selector"
+                    android:autofillHints=""
+                    android:background="@drawable/background_nostroke"
+                    android:inputType="date"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:hint="01/01/2001"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:minHeight="48dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_time_input_layout"
+                app:layout_constraintTop_toBottomOf="@id/ll_date_input_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/img_addtask_time"
+                    android:src="@drawable/icon_clock"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_addtask_time_selector"
+                    android:autofillHints=""
+                    android:background="@drawable/background_nostroke"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:hint="12:12"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:minHeight="48dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_addtask_priority_label"
+                android:text="Priority"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_time_input_layout"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/sp_addtask_priority"
+                android:layout_marginTop="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_priority_label"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_addtask_frequency_label"
+                android:text="Frequency"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/sp_addtask_priority"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/sp_addtask_frequency_selector"
+                android:layout_marginTop="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_frequency_label"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_addtask_description_label"
+                android:text="Description"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_addtask_frequency_selector"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_addtask_description"
+                android:background="@drawable/background_tasks_item"
+                android:hint="Enter your notes...."
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:layout_marginTop="7dp"
+                android:gravity="left"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbarSize="8dp"
+                android:minHeight="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_addtask_description_label"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/et_addtask_description"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

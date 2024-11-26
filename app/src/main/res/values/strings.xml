@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Demo_CuoiKy</string>
+    <string name="todo">TODO</string>
+    <string name="settings">Cài đặt</string>
+    <string name="account">Tài khoản</string>
+    <string name="about">About</string>
+    <string name="log_out">Log out</string>
+    <string name="all_tasks">Tất cả nhiệm vụ</string>
+    <string name="upcoming">Chưa hoàn thành</string>
+    <string name="overdue">Đã hoàn thành</string>
+    <string name="no_event">Không có sự kiện gì</string>
+    <string name="add_event">Thêm sự kiện</string>
+    <string name="write_your_task_name_here">Write your task name here...</string>
+    <string name="category">Category</string>
+    <string name="date">Date</string>
+</resources>
